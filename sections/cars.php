@@ -68,19 +68,19 @@ $cars = $stmt->fetchAll();
   </div>
 
   <!-- Search & Filter -->
-  <div class="flex gap-4">
+  <div class="flex flex-col gap-4">
     <div class="flex-1 relative">
       <input type="text" id="car-search" 
              onkeyup="filterCars()"
-             class="w-full bg-zinc-900 border border-zinc-700 rounded-3xl py-3 pl-12 focus:outline-none focus:border-orange-500"
+             class="w-full bg-zinc-900 border border-zinc-700 rounded-3xl py-3 pl-12 pr-4 focus:outline-none focus:border-orange-500"
              placeholder="Search by make, model or VIN...">
       <i class="fa-solid fa-magnifying-glass absolute left-5 top-3.5 text-zinc-500"></i>
     </div>
   </div>
 
   <!-- Cars Table -->
-  <div class="bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800">
-    <table class="w-full">
+  <div class="bg-zinc-900 rounded-3xl overflow-x-auto border border-zinc-800">
+    <table class="min-w-full">
       <thead class="bg-zinc-950">
         <tr>
           <th class="px-6 py-5 text-left">Car</th>

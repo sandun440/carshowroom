@@ -90,17 +90,17 @@ $availableCars = $stmt->fetchAll();
       <p class="text-zinc-400 mt-1"><?= count($availableCars) ?> premium vehicles ready for sale</p>
     </div>
     
-    <div class="flex gap-3">
-      <div class="relative">
+    <div class="flex flex-col sm:flex-row sm:items-center gap-3 w-full sm:w-auto">
+      <div class="relative flex-1 min-w-0">
         <input type="text" id="search-cars" 
                onkeyup="filterAvailableCars()"
-               class="bg-zinc-900 border border-zinc-800 rounded-3xl py-3 pl-12 w-80 focus:outline-none focus:border-emerald-500 text-zinc-100"
+               class="bg-zinc-900 border border-zinc-800 rounded-3xl py-3 pl-12 pr-4 w-full sm:w-80 focus:outline-none focus:border-emerald-500 text-zinc-100"
                placeholder="Search make or model...">
         <i class="fa-solid fa-magnifying-glass absolute left-5 top-3.5 text-zinc-500"></i>
       </div>
-      
+
       <select id="filter-fuel" onchange="filterAvailableCars()" 
-              class="bg-zinc-900 border border-zinc-800 rounded-3xl px-6 py-3 focus:outline-none text-zinc-100">
+              class="bg-zinc-900 border border-zinc-800 rounded-3xl px-6 py-3 w-full sm:w-56 focus:outline-none text-zinc-100">
         <option value="">All Fuel Types</option>
         <option value="Petrol">Petrol</option>
         <option value="Diesel">Diesel</option>

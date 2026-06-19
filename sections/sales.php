@@ -107,8 +107,8 @@ $salesList = $stmt->fetchAll();
   </div>
 
   <!-- Sales Records Table -->
-  <div class="bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden shadow-2xl">
-    <table class="w-full text-left">
+  <div class="bg-zinc-900 border border-zinc-800 rounded-3xl overflow-x-auto shadow-2xl">
+    <table class="min-w-full text-left">
       <thead class="bg-zinc-950/80 border-b border-zinc-800">
         <tr class="text-zinc-400 text-sm">
           <th class="px-6 py-5">Car Details</th>

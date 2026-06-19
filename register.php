@@ -80,20 +80,20 @@ $roles = $pdo->query("SELECT * FROM roles")->fetchAll();
     <div class="bg-zinc-900 rounded-3xl p-10 border border-zinc-800">
       <form method="POST" class="space-y-6">
         
-        <div class="grid grid-cols-2 gap-6">
-          <div>
-            <label class="block text-zinc-400 mb-2">Full Name</label>
-            <input type="text" name="full_name" required
-                   class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-5 py-4 focus:outline-none focus:border-orange-500">
-          </div>
-          <div>
-            <label class="block text-zinc-400 mb-2">Username</label>
-            <input type="text" name="username" required
-                   class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-5 py-4 focus:outline-none focus:border-orange-500">
-          </div>
-        </div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div>
+        <label class="block text-zinc-400 mb-2">Full Name</label>
+        <input type="text" name="full_name" required
+               class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-5 py-4 focus:outline-none focus:border-orange-500">
+      </div>
+      <div>
+        <label class="block text-zinc-400 mb-2">Username</label>
+        <input type="text" name="username" required
+               class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-5 py-4 focus:outline-none focus:border-orange-500">
+      </div>
+    </div>
 
-        <div class="grid grid-cols-2 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label class="block text-zinc-400 mb-2">Email</label>
             <input type="email" name="email" required

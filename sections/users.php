@@ -148,7 +148,7 @@ $roles = $pdo->query("SELECT * FROM roles")->fetchAll();
   </div>
 
   <!-- Filter & Search -->
-  <div class="flex gap-4">
+  <div class="flex flex-col gap-4">
     <div class="flex-1 relative">
       <input type="text" id="staff-search" onkeyup="filterStaff()"
              class="w-full bg-zinc-900 border border-zinc-800 rounded-3xl py-3 pl-12 pr-4 focus:outline-none focus:border-orange-500 text-zinc-100 placeholder-zinc-500"
@@ -158,8 +158,8 @@ $roles = $pdo->query("SELECT * FROM roles")->fetchAll();
   </div>
 
   <!-- Staff Table -->
-  <div class="bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden shadow-2xl">
-    <table class="w-full">
+  <div class="bg-zinc-900 border border-zinc-800 rounded-3xl overflow-x-auto shadow-2xl">
+    <table class="min-w-full">
       <thead class="bg-zinc-950/80 border-b border-zinc-800">
         <tr class="text-zinc-400 text-sm">
           <th class="px-6 py-5 text-left">Staff Member</th>
