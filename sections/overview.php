@@ -87,7 +87,7 @@ $recentSales = $stmt->fetchAll();
       <div class="flex items-center justify-between">
         <div>
           <p class="text-zinc-400 text-sm">Revenue (30d)</p>
-          <p class="text-5xl font-bold mt-3">₹<?= number_format($totalRevenue / 100000, 1) ?>L</p>
+          <p class="text-5xl font-bold mt-3">LKR <?= number_format($totalRevenue) ?></p>
         </div>
         <div class="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center text-3xl">📈</div>
       </div>
@@ -124,7 +124,7 @@ $recentSales = $stmt->fetchAll();
                 <div class="text-sm text-zinc-500"><?= $sale['year'] ?></div>
               </td>
               <td class="py-4 text-zinc-300"><?= htmlspecialchars($sale['salesperson']) ?></td>
-              <td class="py-4 text-right font-semibold">₹<?= number_format($sale['sale_price']) ?></td>
+              <td class="py-4 text-right font-semibold">LKR <?= number_format($sale['sale_price']) ?></td>
               <td class="py-4 text-right text-sm text-zinc-400"><?= date('d M, Y', strtotime($sale['sale_date'])) ?></td>
             </tr>
             <?php endforeach; ?>

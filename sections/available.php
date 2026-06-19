@@ -140,7 +140,7 @@ $availableCars = $stmt->fetchAll();
             <p class="text-zinc-400 text-sm mt-0.5"><?= htmlspecialchars($car['color'] ?? '') ?></p>
           </div>
           <div class="text-right">
-            <p class="text-2xl font-bold text-emerald-400">₹<?= number_format($car['price']) ?></p>
+            <p class="text-2xl font-bold text-emerald-400">LKR <?= number_format($car['price']) ?></p>
           </div>
         </div>
 
@@ -231,7 +231,7 @@ $availableCars = $stmt->fetchAll();
                  class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-4 py-3 text-zinc-100 focus:outline-none focus:border-emerald-500 transition">
         </div>
         <div>
-          <label class="block text-zinc-400 text-sm mb-1.5">Sale Price (₹) *</label>
+          <label class="block text-zinc-400 text-sm mb-1.5">Sale Price (LKR) *</label>
           <input type="number" name="sale_price" id="sale-price-input" required
                  class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-4 py-3 text-zinc-100 font-bold focus:outline-none focus:border-emerald-500 transition">
         </div>
@@ -303,7 +303,7 @@ function viewCarDetails(car) {
         </div>
         <div>
           <span class="text-zinc-500 text-xs uppercase tracking-wider block mb-0.5">Price</span>
-          <p class="font-bold text-emerald-400 text-lg">₹${parseInt(car.price).toLocaleString()}</p>
+          <p class="font-bold text-emerald-400 text-lg">LKR ${parseInt(car.price).toLocaleString()}</p>
         </div>
         <div>
           <span class="text-zinc-500 text-xs uppercase tracking-wider block mb-0.5">Fuel Type</span>

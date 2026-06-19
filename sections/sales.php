@@ -44,8 +44,8 @@ $salesList = $stmt->fetchAll();
       <div class="flex items-center justify-between">
         <div>
           <p class="text-zinc-400 text-sm">Total Revenue</p>
-          <p class="text-3xl font-extrabold mt-2 text-white">₹<?= number_format($totalRevenue / 100000, 2) ?> Lakh</p>
-          <p class="text-xs text-zinc-500 mt-1">₹<?= number_format($totalRevenue) ?> total</p>
+          <p class="text-3xl font-extrabold mt-2 text-white">LKR <?= number_format($totalRevenue) ?></p>
+          <p class="text-xs text-zinc-500 mt-1">Total value in LKR</p>
         </div>
         <div class="w-12 h-12 bg-emerald-500/10 rounded-2xl flex items-center justify-center text-2xl">💰</div>
       </div>
@@ -66,8 +66,8 @@ $salesList = $stmt->fetchAll();
       <div class="flex items-center justify-between">
         <div>
           <p class="text-zinc-400 text-sm">Average Deal Value</p>
-          <p class="text-3xl font-extrabold mt-2 text-white">₹<?= number_format($avgPrice / 100000, 2) ?> L</p>
-          <p class="text-xs text-zinc-500 mt-1">₹<?= number_format($avgPrice) ?></p>
+          <p class="text-3xl font-extrabold mt-2 text-white">LKR <?= number_format($avgPrice) ?></p>
+          <p class="text-xs text-zinc-500 mt-1">Average value in LKR</p>
         </div>
         <div class="w-12 h-12 bg-purple-500/10 rounded-2xl flex items-center justify-center text-2xl">📈</div>
       </div>
@@ -140,12 +140,12 @@ $salesList = $stmt->fetchAll();
           </td>
 
           <td class="px-6 py-5 text-right">
-            <span class="font-bold text-emerald-400 text-base">₹<?= number_format($sale['sale_price']) ?></span>
+            <span class="font-bold text-emerald-400 text-base">LKR <?= number_format($sale['sale_price']) ?></span>
             <?php 
               $discount = $sale['original_price'] - $sale['sale_price'];
               if ($discount > 0): 
             ?>
-              <div class="text-[10px] text-orange-400">Discounted ₹<?= number_format($discount) ?></div>
+              <div class="text-[10px] text-orange-400">Discounted LKR <?= number_format($discount) ?></div>
             <?php endif; ?>
           </td>
 
@@ -221,11 +221,7 @@ function viewSaleDetails(sale) {
     discountBlock = `
       <div class="flex justify-between text-orange-400 text-xs">
         <span>Discount Allowed:</span>
-        <span>- ₹${parseInt(discount).toLocaleString()}</span>
-      </div>
-    `;
-  }
-
+            <span>- LKR ${parseInt(discount).toLocaleString()}</span>
   let contentHtml = `
     <div class="space-y-4">
       
@@ -238,7 +234,7 @@ function viewSaleDetails(sale) {
         </div>
         <div class="text-right">
           <span class="text-xs uppercase tracking-wider text-zinc-500">Closed Deal</span>
-          <p class="font-extrabold text-emerald-400 text-xl">₹${parseInt(sale.sale_price).toLocaleString()}</p>
+          <p class="font-extrabold text-emerald-400 text-xl">LKR ${parseInt(sale.sale_price).toLocaleString()}</p>
         </div>
       </div>
 
@@ -279,7 +275,7 @@ function viewSaleDetails(sale) {
           </div>
           <div>
             <span class="text-zinc-500 text-xs block">Original Sticker Price</span>
-            <span>₹${parseInt(sale.original_price).toLocaleString()}</span>
+            <span>LKR ${parseInt(sale.original_price).toLocaleString()}</span>
           </div>
           <div>
             <span class="text-zinc-500 text-xs block">Closing Date</span>

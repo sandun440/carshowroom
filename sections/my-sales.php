@@ -55,9 +55,7 @@ $mySales = $stmtList->fetchAll();
       <div class="flex items-center justify-between">
         <div>
           <p class="text-zinc-400 text-sm">Revenue Generated</p>
-          <p class="text-3xl font-extrabold mt-2 text-white">₹<?= number_format($revenue) ?></p>
-          <p class="text-xs text-zinc-500 mt-1">Total deal volume</p>
-        </div>
+          <p class="text-3xl font-extrabold mt-2 text-white">LKR <?= number_format($revenue) ?></p>
         <div class="w-12 h-12 bg-emerald-500/10 rounded-2xl flex items-center justify-center text-2xl">💰</div>
       </div>
     </div>
@@ -79,7 +77,7 @@ $mySales = $stmtList->fetchAll();
       <div class="flex items-center justify-between">
         <div>
           <p class="text-zinc-400 text-sm">Commission Earned (2.5%)</p>
-          <p class="text-3xl font-extrabold mt-2 text-emerald-400">₹<?= number_format($commission) ?></p>
+          <p class="text-3xl font-extrabold mt-2 text-emerald-400">LKR <?= number_format($commission) ?></p>
           <p class="text-xs text-zinc-500 mt-1">Payable this cycle</p>
         </div>
         <div class="w-12 h-12 bg-purple-500/10 rounded-2xl flex items-center justify-center text-2xl">⚡</div>
@@ -130,7 +128,7 @@ $mySales = $stmtList->fetchAll();
           </td>
 
           <td class="px-6 py-5 text-right font-bold text-emerald-400">
-            ₹<?= number_format($sale['sale_price']) ?>
+            LKR <?= number_format($sale['sale_price']) ?>
           </td>
 
           <td class="px-6 py-5 text-center">
@@ -205,12 +203,7 @@ function viewSaleDetails(sale) {
     discountBlock = `
       <div class="flex justify-between text-orange-400 text-xs">
         <span>Sticker Discount Allowed:</span>
-        <span>- ₹${parseInt(discount).toLocaleString()}</span>
-      </div>
-    `;
-  }
-
-  let contentHtml = `
+            <span>- LKR ${parseInt(discount).toLocaleString()}</span>
     <div class="space-y-4">
       
       <!-- Deal Header -->
@@ -222,9 +215,7 @@ function viewSaleDetails(sale) {
         </div>
         <div class="text-right">
           <span class="text-xs uppercase tracking-wider text-zinc-500">Closing Amount</span>
-          <p class="font-extrabold text-emerald-400 text-xl">₹${parseInt(sale.sale_price).toLocaleString()}</p>
-        </div>
-      </div>
+          <p class="font-extrabold text-emerald-400 text-xl">LKR ${parseInt(sale.sale_price).toLocaleString()}</p>
 
       <!-- Customer Section -->
       <div class="bg-zinc-850 p-4 border border-zinc-800/40 rounded-2xl space-y-2">
@@ -263,7 +254,7 @@ function viewSaleDetails(sale) {
           </div>
           <div>
             <span class="text-zinc-500 text-xs block">Original Sticker Price</span>
-            <span>₹${parseInt(sale.original_price).toLocaleString()}</span>
+            <span>LKR ${parseInt(sale.original_price).toLocaleString()}</span>
           </div>
           <div>
             <span class="text-zinc-500 text-xs block">Closing Status</span>

@@ -105,7 +105,7 @@ $cars = $stmt->fetchAll();
             </div>
           </td>
           <td class="px-6 py-5">
-            <p class="font-bold text-lg">₹<?= number_format($car['price']) ?></p>
+            <p class="font-bold text-lg">LKR <?= number_format($car['price']) ?></p>
           </td>
           <td class="px-6 py-5 text-sm text-zinc-400">
             <?= $car['mileage'] ?> km • <?= $car['fuel_type'] ?> • <?= $car['transmission'] ?>
@@ -168,7 +168,7 @@ $cars = $stmt->fetchAll();
                  class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-4 py-3">
         </div>
         <div>
-          <label class="block text-sm text-zinc-400 mb-1">Price (₹)</label>
+          <label class="block text-sm text-zinc-400 mb-1">Price (LKR)</label>
           <input type="number" name="price" id="price" required
                  class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-4 py-3">
         </div>
