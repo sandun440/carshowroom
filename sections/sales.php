@@ -221,7 +221,11 @@ function viewSaleDetails(sale) {
     discountBlock = `
       <div class="flex justify-between text-orange-400 text-xs">
         <span>Discount Allowed:</span>
-            <span>- LKR ${parseInt(discount).toLocaleString()}</span>
+        <span>- LKR ${parseInt(discount).toLocaleString()}</span>
+      </div>
+    `;
+  }
+
   let contentHtml = `
     <div class="space-y-4">
       

@@ -56,6 +56,7 @@ $mySales = $stmtList->fetchAll();
         <div>
           <p class="text-zinc-400 text-sm">Revenue Generated</p>
           <p class="text-3xl font-extrabold mt-2 text-white">LKR <?= number_format($revenue) ?></p>
+        </div>
         <div class="w-12 h-12 bg-emerald-500/10 rounded-2xl flex items-center justify-center text-2xl">💰</div>
       </div>
     </div>
@@ -203,7 +204,12 @@ function viewSaleDetails(sale) {
     discountBlock = `
       <div class="flex justify-between text-orange-400 text-xs">
         <span>Sticker Discount Allowed:</span>
-            <span>- LKR ${parseInt(discount).toLocaleString()}</span>
+        <span>- LKR ${parseInt(discount).toLocaleString()}</span>
+      </div>
+    `;
+  }
+
+  let contentHtml = `
     <div class="space-y-4">
       
       <!-- Deal Header -->
@@ -216,6 +222,8 @@ function viewSaleDetails(sale) {
         <div class="text-right">
           <span class="text-xs uppercase tracking-wider text-zinc-500">Closing Amount</span>
           <p class="font-extrabold text-emerald-400 text-xl">LKR ${parseInt(sale.sale_price).toLocaleString()}</p>
+        </div>
+      </div>
 
       <!-- Customer Section -->
       <div class="bg-zinc-850 p-4 border border-zinc-800/40 rounded-2xl space-y-2">
